@@ -37,7 +37,7 @@ function Course() {
             />
 
             <div className="flex-1">
-              <h2 className="md:hidden block text-4xl font-bold text-center mb-[5vh] flex-1">
+              <h2 className="md:hidden block text-4xl font-darumadrop font-bold text-center mb-[5vh] flex-1">
                 ...et professionnel !
               </h2>
               <ParcoursCard items={parcoursPro} />

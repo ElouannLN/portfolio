@@ -13,7 +13,7 @@ function About() {
         <div className="flex flex-col md:flex-row items-start w-full max-w-6xl gap-6">
           <div className="w-full md:w-1/3 flex flex-col items-center">
             <div className="relative w-full bg-orange-300 rounded-lg shadow-lg flex flex-col items-center pt-24 pb-6 px-6">
-              <div className="absolute -top-12 w-32 sm:w-40 md:w-48 lg:w-56 aspect-square rounded-full overflow-hidden border-7 border-white shadow-xl">
+              <div className="absolute -top-12 bg-white w-32 sm:w-40 md:w-48 lg:w-56 aspect-square rounded-full overflow-hidden border-7 border-white shadow-xl">
                 <img
                   src={Elouann}
                   alt="Profil"
@@ -21,7 +21,7 @@ function About() {
                 />
               </div>
 
-              <div className="lg:mt-[100px] sm:mt-[20px] text-center w-full text-shadow-lg">
+              <div className="lg:mt-[100px] sm:mt-[20px] text-center w-full text-shadow-lg md:mt-15">
                 <h1 className="text-white text-3xl font-bold">
                   LE NEZET Elouann
                 </h1>

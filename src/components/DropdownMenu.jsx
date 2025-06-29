@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
-import { ArrowDownToLine } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import dropdown from "../data/header/dropdown";
 
@@ -13,12 +13,29 @@ export default function DropdownMenu() {
         onClick={() => setOpen(!open)}
         className="p-2 rounded-md shadow-md bg-white"
       >
-        <motion.div
-          animate={{ rotate: open ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <ArrowDownToLine size={20} />
-        </motion.div>
+        <AnimatePresence mode="wait" initial={false}>
+          {open ? (
+            <motion.div
+              key="x-icon"
+              initial={{ opacity: 0.5, rotate: -90 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              exit={{ opacity: 0, rotate: -90 }}
+              transition={{ duration: 0.15 }}
+            >
+              <X size={25} />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="menu-icon"
+              initial={{ opacity: 0.5, rotate: 90 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              exit={{ opacity: 0, rotate: 90 }}
+              transition={{ duration: 0.15 }}
+            >
+              <Menu size={25} />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </button>
 
       <AnimatePresence>
@@ -28,7 +45,7 @@ export default function DropdownMenu() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute right-0 mt-6 bg-white shadow-lg rounded-md p-2 w-40"
+            className="absolute right-0 mt-6 bg-white shadow-lg rounded-md p-2 w-40 border-l-2 border-orange-300"
           >
             {dropdown.map(({ id, title }) => (
               <Link
