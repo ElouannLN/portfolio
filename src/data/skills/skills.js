@@ -31,10 +31,10 @@ const skills = [
     image: NotebookPen,
     skills: [
       "Security By Design",
-      "Diagramme UML / SysML",
+      "Diagrammes UML / SysML",
       "Schémas relationnels",
-      "Cahier des charges",
-      "Cahier des tests",
+      "Cahiers des charges",
+      "Cahiers des tests",
       "Schémas d'architecture",
     ],
   },
